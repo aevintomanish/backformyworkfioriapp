@@ -1,0 +1,118 @@
+{
+  "_version": "1.28.0",
+  "sap.app": {
+    "id": "com.ibm.zcaseprdfs11",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.12.0",
+      "toolsId": "1567d1c8-7f6f-4ac5-96dc-6f440fe3e92b"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.84.25",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "com.ibm.zcaseprdfs11.i18n.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "com.ibm.zcaseprdfs11.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "bypassed":{
+          "target":["Main"]
+        }
+      },
+      "routes": [
+        {
+          "name": "RouteMain",
+          "pattern": ":?query:",
+          "target": ["TargetMain"]
+        },
+          {
+           "pattern": "Detail/{productPath}",
+          "name": "Detail",
+          "target": ["Detail"]
+        } 
+       
+      ],
+      "targets": {
+        "TargetMain": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Main",
+          "viewName": "Main",
+          "viewLevel": 1
+        },
+        "Detail": {
+          "viewId": "Detail",
+           "viewName": "Detail",
+           "viewLevel": 2
+        }
+        
+      }
+    },
+    "rootView": {
+      "viewName": "com.ibm.zcaseprdfs11.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+	"fileName": "id_1700804502502_367_moveControls",
+	"fileType": "change",
+	"changeType": "moveControls",
+	"moduleName": "",
+	"reference": "customer.Zadapt11",
+	"packageName": "$TMP",
+	"content": {
+		"movedElements": [{
+			"selector": {
+				"id": "ui.ssuite.s2p.mm.pur.po.manage.st.s1::sap.suite.ui.generic.template.ObjectPage.view.Details::C_PurchaseOrderTP--GeneralInformationFacet2::PurchasingGroup::GroupElement",
+				"idIsLocal": false
+			},
+			"sourceIndex": 0,
+			"targetIndex": 1
+		}],
+		"source": {
+			"selector": {
+				"aggregation": "formElements",
+				"type": "sap.ui.comp.smartform.Group",
+				"id": "ui.ssuite.s2p.mm.pur.po.manage.st.s1::sap.suite.ui.generic.template.ObjectPage.view.Details::C_PurchaseOrderTP--GeneralInformationFacet2::FormGroup",
+				"idIsLocal": false
+			}
+		},
+		"target": {
+			"selector": {
+				"aggregation": "formElements",
+				"type": "sap.ui.comp.smartform.Group",
+				"id": "ui.ssuite.s2p.mm.pur.po.manage.st.s1::sap.suite.ui.generic.template.ObjectPage.view.Details::C_PurchaseOrderTP--GeneralInformationFacet2::FormGroup",
+				"idIsLocal": false
+			}
+		}
+	},
+	"selector": {
+		"id": "ui.ssuite.s2p.mm.pur.po.manage.st.s1::sap.suite.ui.generic.template.ObjectPage.view.Details::C_PurchaseOrderTP--GeneralInformationCollectionFacet::Form",
+		"idIsLocal": false
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/ui.ssuite.s2p.mm.pur.po.manage.st.s1/changes/",
+	"projectId": "customer.Zadapt11",
+	"creation": "2023-11-24T05:41:42.739Z",
+	"originalLanguage": "EN",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.84.40",
+		"sourceChangeFileName": "",
+		"compositeCommand": "",
+		"command": "move"
+	},
+	"oDataInformation": {},
+	"dependentSelector": {
+		"source": {
+			"id": "ui.ssuite.s2p.mm.pur.po.manage.st.s1::sap.suite.ui.generic.template.ObjectPage.view.Details::C_PurchaseOrderTP--GeneralInformationFacet2::FormGroup",
+			"idIsLocal": false
+		},
+		"target": {
+			"id": "ui.ssuite.s2p.mm.pur.po.manage.st.s1::sap.suite.ui.generic.template.ObjectPage.view.Details::C_PurchaseOrderTP--GeneralInformationFacet2::FormGroup",
+			"idIsLocal": false
+		},
+		"movedElements": [{
+			"id": "ui.ssuite.s2p.mm.pur.po.manage.st.s1::sap.suite.ui.generic.template.ObjectPage.view.Details::C_PurchaseOrderTP--GeneralInformationFacet2::PurchasingGroup::GroupElement",
+			"idIsLocal": false
+		}]
+	},
+	"jsOnly": false,
+	"variantReference": "ui.ssuite.s2p.mm.pur.po.manage.st.s1::sap.suite.ui.generic.template.ObjectPage.view.Details::C_PurchaseOrderTP--template::ObjectPage::ObjectPageVariant",
+	"appDescriptorChange": false
+}

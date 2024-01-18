@@ -1,0 +1,40 @@
+{
+	"fileName": "id_1700804060345_364_rename",
+	"fileType": "change",
+	"changeType": "rename",
+	"moduleName": "",
+	"reference": "customer.Zadapt11",
+	"packageName": "$TMP",
+	"content": {
+		"originalControlType": "sap.uxap.ObjectPageSection"
+	},
+	"selector": {
+		"id": "ui.ssuite.s2p.mm.pur.po.manage.st.s1::sap.suite.ui.generic.template.ObjectPage.view.Details::C_PurchaseOrderTP--ItemsFacet::Section",
+		"idIsLocal": false
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {
+		"newText": {
+			"value": "Items1",
+			"type": "XGRP"
+		}
+	},
+	"namespace": "apps/ui.ssuite.s2p.mm.pur.po.manage.st.s1/changes/",
+	"projectId": "customer.Zadapt11",
+	"creation": "2023-11-24T05:34:21.570Z",
+	"originalLanguage": "EN",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.84.40",
+		"sourceChangeFileName": "",
+		"compositeCommand": "",
+		"command": "rename"
+	},
+	"oDataInformation": {},
+	"dependentSelector": {},
+	"jsOnly": false,
+	"variantReference": "ui.ssuite.s2p.mm.pur.po.manage.st.s1::sap.suite.ui.generic.template.ObjectPage.view.Details::C_PurchaseOrderTP--template::ObjectPage::ObjectPageVariant",
+	"appDescriptorChange": false
+}

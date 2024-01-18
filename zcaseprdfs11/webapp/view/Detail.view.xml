@@ -1,0 +1,43 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:form='sap.ui.layout.form'
+    controllerName="com.ibm.zcaseprdfs11.controller.Detail"
+>
+    <Page id="page" title="{i18n>title}">
+     <Text text="{myModel>/ProductID}"/>
+        <form:SimpleForm           
+            layout="ResponsiveGridLayout"
+            columnsL="2"
+            columnsM="1"
+            labelSpanL="4"
+            labelSpanM="4"
+            emptySpanL="1"
+            emptySpanM="1"
+            columns="2" id="formId">
+
+               <Label text="Group 1" />
+               <Label text="Product ID" />
+               <Input value="{productModel>/ProductID}" />
+               <Label text="Product Name" />
+               <Input value="{productModel>/ProductName}" />
+               <Label text="Supplier" />
+               <Input value="{productModel>/Supplier}" />
+     
+            <!-- Group 2 -->
+      
+               <Label text="Group 2" />
+               <Label text="Dimensions" />
+               <Input value="{productModel>/Dimensions}" />
+               <Label text="Weight" />
+               <Input value="{productModel>/Weight}" />
+               <Label text="Price" />
+               <Input value="{productModel>/Price}" />
+           
+            
+         </form:SimpleForm>
+       
+          
+    
+    </Page>
+</mvc:View>

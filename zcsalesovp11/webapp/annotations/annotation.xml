@@ -1,0 +1,418 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common" />
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI" />
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Communication.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication" />
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/sap/SD_F2200_OVP_ISR_SRV/$metadata">
+        <edmx:Include Namespace="SD_F2200_OVP_ISR_SRV" Alias="SAP" />
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
+            <Annotations Target="SAP.C_GlobalFiltersOVP_F2200Type">
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>P_DisplayCurrency</PropertyPath>
+                        <PropertyPath>SoldToParty</PropertyPath>
+                        <PropertyPath>SalesOrganization</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP.C_Credit_Memo_F2200Type">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CreditMemoRequest" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="OverallSDProcessStatus" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="TotalNetAmount" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP.C_Sofulfillmentmonitor_F2200Type">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="IssueCategory" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="IssueCategoryName" />
+                        </Record>
+                        <Record Type="UI.DataFieldForAnnotation">
+                            <PropertyValue Property="Value" Path="NmbrOfAllIssues" />
+                            <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#NmbrOfAllIssues" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.DataPoint" Qualifier="NmbrOfAllIssues">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Property="Value" Path="NmbrOfAllIssues" />
+                        <PropertyValue Property="CriticalityCalculation">
+                            <Record Type="UI.CriticalityCalculationType">
+                                <PropertyValue Property="ImprovementDirection" EnumMember="UI.ImprovementDirectionType/Minimize" />
+                                <PropertyValue Property="DeviationRangeHighValue" Int="1" />
+                                <PropertyValue Property="ToleranceRangeHighValue" Int="1" />
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP.C_OpenSalesOrders_F2200Type">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SalesOrder" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="OverallSDProcessStatusDesc" />
+                        </Record>
+                        <Record Type="UI.DataFieldForAnnotation">
+                            <PropertyValue Property="Value" Path="LastChangeDateTime" />
+                            <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#LastChangeDateTime" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="TotalNetAmount" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.DataPoint" Qualifier="LastChangeDateTime">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Path="LastChangeDateTime" Property="Value" />
+                        <PropertyValue Property="Criticality" Path="CriticalityCode" />
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP.C_CustomerReturns_F2200Type">
+                <Annotation Term="UI.LineItem" Qualifier="allActiveReturnView">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CustomerReturn" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ReferenceSDDocument" />
+                        </Record>
+                        <Record Type="UI.DataFieldForAnnotation">
+                            <PropertyValue Property="Value" Path="LastChangeDateTime" />
+                            <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#LastChangeDateTime" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="TotalNetAmount" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CustomerName" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.DataPoint" Qualifier="LastChangeDateTime">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Path="LastChangeDateTime" Property="Value" />
+                        <PropertyValue Property="Criticality" Path="CriticalityCode" />
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.LineItem" Qualifier="">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CustomerReturn" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ReferenceSDDocument" />
+                        </Record>
+                        <Record Type="UI.DataFieldForAnnotation">
+                            <PropertyValue Property="Value" Path="LastChangeDateTime" />
+                            <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#LastChangeDateTime" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="TotalNetAmount" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CustomerName" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.DataPoint" Qualifier="LastChangeDateTime">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Path="LastChangeDateTime" Property="Value" />
+                        <PropertyValue Property="Criticality" Path="CriticalityCode" />
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.LineItem" Qualifier="readyforRefundView">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CustomerReturn" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ReferenceSDDocument" />
+                        </Record>
+                        <Record Type="UI.DataFieldForAnnotation">
+                            <PropertyValue Property="Value" Path="LastChangeDateTime" />
+                            <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#LastChangeDateTime" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="TotalNetAmount" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CustomerName" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.DataPoint" Qualifier="LastChangeDateTime">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Path="LastChangeDateTime" Property="Value" />
+                        <PropertyValue Property="Criticality" Path="CriticalityCode" />
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.LineItem" Qualifier="notReleasedView">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CustomerReturn" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ReferenceSDDocument" />
+                        </Record>
+                        <Record Type="UI.DataFieldForAnnotation">
+                            <PropertyValue Property="Value" Path="LastChangeDateTime" />
+                            <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#LastChangeDateTime" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="TotalNetAmount" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CustomerName" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.DataPoint" Qualifier="LastChangeDateTime">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Path="LastChangeDateTime" Property="Value" />
+                        <PropertyValue Property="Criticality" Path="CriticalityCode" />
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.LineItem" Qualifier="unDeliveredView">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CustomerReturn" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ReferenceSDDocument" />
+                        </Record>
+                        <Record Type="UI.DataFieldForAnnotation">
+                            <PropertyValue Property="Value" Path="LastChangeDateTime" />
+                            <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#LastChangeDateTime" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="TotalNetAmount" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CustomerName" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.DataPoint" Qualifier="LastChangeDateTime">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Path="LastChangeDateTime" Property="Value" />
+                        <PropertyValue Property="Criticality" Path="CriticalityCode" />
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.LineItem" Qualifier="CreatedwithLast7DaysView">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CustomerReturn" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="ReferenceSDDocument" />
+                        </Record>
+                        <Record Type="UI.DataFieldForAnnotation">
+                            <PropertyValue Property="Value" Path="LastChangeDateTime" />
+                            <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#LastChangeDateTime" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="TotalNetAmount" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CustomerName" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.DataPoint" Qualifier="LastChangeDateTime">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Path="LastChangeDateTime" Property="Value" />
+                        <PropertyValue Property="Criticality" Path="CriticalityCode" />
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP.C_MonthlySalesRevenue_F2200Result">
+                <Annotation Term="UI.SelectionVariant" Qualifier="IS4">
+                    <Record Type="UI.SelectionVariantType">
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="PropertyName" PropertyPath="P_NumberOfMonths">
+                                        <PropertyPath>P_NumberOfMonths</PropertyPath>
+                                    </PropertyValue>
+                                    <PropertyValue Property="PropertyValue" String="4" />
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="PropertyName" PropertyPath="P_ExchangeRateType">
+                                        <PropertyPath>P_NumberOfMonths</PropertyPath>
+                                    </PropertyValue>
+                                    <PropertyValue Property="PropertyValue" String="M" />
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="PropertyName" PropertyPath="P_DisplayCurrency">
+                                        <PropertyPath>P_NumberOfMonths</PropertyPath>
+                                    </PropertyValue>
+                                    <PropertyValue Property="PropertyValue" String="USD" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="SelectOptions" />
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.SelectionVariant" Qualifier="IS6">
+                    <Record Type="UI.SelectionVariantType">
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="PropertyName" PropertyPath="P_NumberOfMonths">
+                                        <PropertyPath>P_NumberOfMonths</PropertyPath>
+                                    </PropertyValue>
+                                    <PropertyValue Property="PropertyValue" String="6" />
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="PropertyName" PropertyPath="P_ExchangeRateType">
+                                        <PropertyPath>P_NumberOfMonths</PropertyPath>
+                                    </PropertyValue>
+                                    <PropertyValue Property="PropertyValue" String="M" />
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="PropertyName" PropertyPath="P_DisplayCurrency">
+                                        <PropertyPath>P_NumberOfMonths</PropertyPath>
+                                    </PropertyValue>
+                                    <PropertyValue Property="PropertyValue" String="USD" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="SelectOptions" />
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.SelectionVariant" Qualifier="IS12">
+                    <Record Type="UI.SelectionVariantType">
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="PropertyName" PropertyPath="P_NumberOfMonths">
+                                        <PropertyPath>P_NumberOfMonths</PropertyPath>
+                                    </PropertyValue>
+                                    <PropertyValue Property="PropertyValue" String="12" />
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="PropertyName" PropertyPath="P_ExchangeRateType">
+                                        <PropertyPath>P_NumberOfMonths</PropertyPath>
+                                    </PropertyValue>
+                                    <PropertyValue Property="PropertyValue" String="M" />
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="PropertyName" PropertyPath="P_DisplayCurrency">
+                                        <PropertyPath>P_NumberOfMonths</PropertyPath>
+                                    </PropertyValue>
+                                    <PropertyValue Property="PropertyValue" String="USD" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="SelectOptions" />
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.Chart" Qualifier="ISA">
+                    <Record Type="UI.ChartDefinitionType">
+                        <PropertyValue Property="Title" String="Aevin" />
+                        <PropertyValue Property="MeasureAttributes">
+                            <Collection>
+                                <Record Type="UI.ChartMeasureAttributeType">
+                                    <PropertyValue Property="Measure" PropertyPath="IncomingSalesOrdersNetAmtInDC" />
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1" />
+                                </Record>
+                                <Record Type="UI.ChartMeasureAttributeType">
+                                    <PropertyValue Property="Measure" PropertyPath="ComprnIncgSlsOrdersNetAmtInDC" />
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis2" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="DimensionAttributes">
+                            <Collection>
+                                <Record Type="UI.ChartDimensionAttributeType">
+                                    <PropertyValue Property="Dimension" PropertyPath="YearMonth" />
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="ChartType" EnumMember="UI.ChartType/VerticalBullet" />
+                        <PropertyValue Property="Dimensions">
+                            <Collection>
+                                <PropertyPath>YearMonth</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Measures">
+                            <Collection>
+                                <PropertyPath>IncomingSalesOrdersNetAmtInDC</PropertyPath>
+                                <PropertyPath>ComprnIncgSlsOrdersNetAmtInDC</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+        <Annotations Target="SAP.C_SalesQuotationPipeline_F2200Type">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataFieldForAnnotation">
+                            <PropertyValue Property="Value" Path="NumberOfQuotations" />
+                            <PropertyValue Property="Target" AnnotationPath="@UI.DataPoint#NumberOfQuotations" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.DataPoint" Qualifier="NumberOfQuotations">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Property="Value" Path="NumberOfQuotations" />
+                        <PropertyValue Property="CriticalityCalculation">
+                            <Record Type="UI.CriticalityCalculationType">
+                                <PropertyValue Property="ImprovementDirection" EnumMember="UI.ImprovementDirectionType/Minimize" />
+                                <PropertyValue Property="DeviationRangeHighValue" Int="1" />
+                                <PropertyValue Property="ToleranceRangeHighValue" Int="1" />
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            	      <Annotations Target="SAP.C_OpenQuotations_F2200Type">
+	   
+       <Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="CriticalityCode"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="OverallSDProcessStatusDesc"/>
+						</Record>
+						<Record Type="UI.DataField">
+							<PropertyValue Property="Value" Path="TotalNetAmount"/>
+						</Record>
+					</Collection>
+				</Annotation>
+                <Annotation Term="UI.DataPoint" Qualifier="BindingPeriodValidityEndDate">
+<Record Type="UI.DataPointType">
+<PropertyValue Path="BindingPeriodValidityEndDate" Property="Value" />
+<PropertyValue Property="Criticality" Path="CriticalityCode" />
+</Record>
+</Annotation>
+           
+       </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

@@ -1,0 +1,11 @@
+{
+  "componentname": "ui.ssuite.s2p.mm.pur.po.manage.st.s1",
+  "safeMode": true,
+  "appvariant": "Zadapt11",
+  "layer": "CUSTOMER_BASE",
+  "sourceSystem": "BTP_HTTP",
+  "isOVPApp": false,
+  "isFioriElement": true,
+  "environment": "ABAP",
+  "ui5Version": "1.84.39"
+}

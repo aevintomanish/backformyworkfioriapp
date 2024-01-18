@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='MD1_100')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='MD1_100')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='MD1_100')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='MD1_100')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='MD1_100')/$value">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='MD1_100')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="../../../sap/sd_f2200_ovp_isr_srv/$metadata">
+        <edmx:Include Namespace="SD_F2200_OVP_ISR_SRV" Alias="SAP"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="sd_f2200_ovp_isr_anno_mdl.v1" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_Credit_Memo_F2200Type/CreditMemoRequestType">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_Credit_Memo_F2200Type/CustomerAccountGroup">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_Credit_Memo_F2200Type/TransactionCurrency">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_Credit_Memo_F2200Type/OverallSDProcessStatus">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_Credit_Memo_F2200Type/OverallBillingBlockStatus">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_Credit_Memo_F2200Type/SalesOrganization">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_Credit_Memo_F2200Type/DistributionChannel">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_Credit_Memo_F2200Type/OrganizationDivision">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_Credit_Memo_F2200Type/SoldToParty">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_Credit_Memo_F2200Type/CustomerClassification">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_Credit_Memo_F2200Type/LastChangeDateTime">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_Credit_Memo_F2200Type/CreatedByUser">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_Credit_Memo_F2200Type/LastChangedByUser">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_Credit_Memo_F2200Type/SalesOffice">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_Credit_Memo_F2200Type/SalesGroup">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_CurrencyValueHelpType">
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Currency"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CurrencyName"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CurrencyShortName"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_CustomerContact_F2200Type/BusinessPartner2">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_CustomerContact_F2200Type/Customer">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_CustomerReturns_F2200Type/SalesOrganization">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_CustomerReturns_F2200Type/DistributionChannel">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_CustomerReturns_F2200Type/OrganizationDivision">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_CustomerReturns_F2200Type/SoldToParty">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_CustomerReturns_F2200Type/SalesOffice">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_CustomerReturns_F2200Type/SalesGroup">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_CustomerReturns_F2200Type/CustomerReturnType">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_CustomerReturns_F2200Type/CustomerAccountGroup">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_CustomerReturns_F2200Type/OvrlReldForSubsqntProcgSts">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_CustomerReturns_F2200Type/OverallDeliveryStatus">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_CustomerReturns_F2200Type/OverallSDProcessStatus">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_CustomerReturns_F2200Type/CustomerClassification">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_CustomerReturns_F2200Type/CreatedByUser">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_CustomerReturns_F2200Type/LastChangedByUser">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_CustomerReturns_F2200Type/AuthorizationGroup">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_DischannelvaluehelpType">
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Distribution Channel"/>
+                        <PropertyValue Property="TypeNamePlural" String="Distribution Channels"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_GlobalFiltersOVP_F2200Type/to_CreatedByUser">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_GlobalFiltersOVP_F2200Type/to_Customer">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_GlobalFiltersOVP_F2200Type/to_CustomerClassification">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_GlobalFiltersOVP_F2200Type/to_DistributionChannel">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_GlobalFiltersOVP_F2200Type/to_Division">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_GlobalFiltersOVP_F2200Type/to_LastChangedByUser">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_GlobalFiltersOVP_F2200Type/to_OrganizationDivision">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_GlobalFiltersOVP_F2200Type/to_SalesGroup">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_GlobalFiltersOVP_F2200Type/to_SalesOffice">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_GlobalFiltersOVP_F2200Type/to_SalesOrganization">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_GlobalFiltersOVP_F2200Type/to_SoldToParty">
+                <Annotation Term="UI.HiddenFilter"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_GlobalFiltersOVP_F2200Type/P_DisplayCurrency">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_MonthlySalesRevenue_F2200Result/CustomerAccountGroup">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_MonthlySalesRevenue_F2200Result/AuthorizationGroup">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_MonthlySalesRevenue_F2200Result/P_ExchangeRateType">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_MonthlySalesRevenue_F2200Result/P_DisplayCurrency">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_MonthlySalesRevenue_F2200Result/P_NumberOfMonths">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_MonthlySalesRevenue_F2200Result/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_MonthlySalesRevenue_F2200Result/IncomingSalesOrdersNetAmtInDC"/>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_MonthlySalesRevenue_F2200Result/ComprnIncgSlsOrdersNetAmtInDC"/>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_MonthlySalesRevenue_F2200Result/NumberOfSalesOrders"/>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_MonthlySalesRevenue_F2200Result/ComparisonNumberOfSalesOrders"/>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_OpenQuotations_F2200Type/LastChangeDate">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_OpenQuotations_F2200Type/SoldToParty">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_OpenQuotations_F2200Type/SalesQuotationType">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_OpenQuotations_F2200Type/SalesOrganization">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_OpenQuotations_F2200Type/DistributionChannel">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_OpenQuotations_F2200Type/OrganizationDivision">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_OpenQuotations_F2200Type/CustomerAccountGroup">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_OpenQuotations_F2200Type/CustomerClassification">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_OpenQuotations_F2200Type/LastChangeDateTime">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_OpenQuotations_F2200Type/CreatedByUser">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_OpenQuotations_F2200Type/LastChangedByUser">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_OpenQuotations_F2200Type/SalesOffice">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_OpenQuotations_F2200Type/SalesGroup">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_OpenSalesOrders_F2200Type/SoldToParty">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_OpenSalesOrders_F2200Type/SalesOrderType">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_OpenSalesOrders_F2200Type/SalesOrganization">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_OpenSalesOrders_F2200Type/DistributionChannel">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_OpenSalesOrders_F2200Type/OrganizationDivision">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_OpenSalesOrders_F2200Type/CustomerAccountGroup">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_OpenSalesOrders_F2200Type/AuthorizationGroup">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_OpenSalesOrders_F2200Type/CustomerClassification">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_OpenSalesOrders_F2200Type/CreatedByUser">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_OpenSalesOrders_F2200Type/LastChangedByUser">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_OpenSalesOrders_F2200Type/SalesOffice">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_OpenSalesOrders_F2200Type/SalesGroup">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_OrgDivisionValueHelpType">
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Division"/>
+                        <PropertyValue Property="TypeNamePlural" String="Divisions"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_SalesDocumentUserVHType">
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Sales Document User"/>
+                        <PropertyValue Property="TypeNamePlural" String="Sales Document Users"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.PresentationVariant">
+                    <Record>
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="UserID"/>
+                                    <PropertyValue Property="Descending" Bool="false"/>
+                                </Record>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="UserDescription"/>
+                                    <PropertyValue Property="Descending" Bool="false"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_SalesGroupValueHelpType">
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Sales Group"/>
+                        <PropertyValue Property="TypeNamePlural" String="Sales Groups"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SalesGroup"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_SalesOfficeValueHelpType">
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Sales Office"/>
+                        <PropertyValue Property="TypeNamePlural" String="Sales Offices"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="SalesOffice"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_SalesQuotationPipeline_F2200Type/SalesQuotationType">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_SalesQuotationPipeline_F2200Type/SalesOrganization">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_SalesQuotationPipeline_F2200Type/DistributionChannel">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_SalesQuotationPipeline_F2200Type/OrganizationDivision">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_SalesQuotationPipeline_F2200Type/CustomerAccountGroup">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_SalesQuotationPipeline_F2200Type/AuthorizationGroup">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_SalesQuotationPipeline_F2200Type/CustomerClassification">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_SalesQuotationPipeline_F2200Type/CreatedByUser">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_SalesQuotationPipeline_F2200Type/LastChangedByUser">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_SalesQuotationPipeline_F2200Type/SalesOffice">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_SalesQuotationPipeline_F2200Type/SalesGroup">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_SalesQuotationPipeline_F2200Type/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_SalesQuotationPipeline_F2200Type/NumberOfQuotations"/>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_Sofulfillmentmonitor_F2200Type/SalesOrderType">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_Sofulfillmentmonitor_F2200Type/SalesOrganization">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_Sofulfillmentmonitor_F2200Type/DistributionChannel">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_Sofulfillmentmonitor_F2200Type/OrganizationDivision">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_Sofulfillmentmonitor_F2200Type/CustomerAccountGroup">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_Sofulfillmentmonitor_F2200Type/AuthorizationGroup">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_Sofulfillmentmonitor_F2200Type/CustomerClassification">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_Sofulfillmentmonitor_F2200Type/CreatedByUser">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_Sofulfillmentmonitor_F2200Type/SalesOffice">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_Sofulfillmentmonitor_F2200Type/SalesGroup">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_Sofulfillmentmonitor_F2200Type/ID">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_Sofulfillmentmonitor_F2200Type/NmbrOfAllIssues"/>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_SoldToValueHelpType/EmailAddress">
+                <Annotation Term="Communication.IsEmailAddress"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_SoldToValueHelpType/OrganizationBPName1">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_SoldToValueHelpType/OrganizationBPName2">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_SoldToValueHelpType/BusinessPartnerImageURL">
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_SoldToValueHelpType/InternationalPhoneNumber">
+                <Annotation Term="UI.Hidden"/>
+                <Annotation Term="Communication.IsPhoneNumber"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.C_SoldToValueHelpType">
+                <Annotation Term="UI.QuickViewFacets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Address"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#SoldToQuickView"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.FieldGroup" Qualifier="SoldToQuickView">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="PostalCode"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="CityName"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="Country"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Sold-To Party"/>
+                        <PropertyValue Property="TypeNamePlural" String="Sold-To Parties"/>
+                        <PropertyValue Property="ImageUrl" Path="BusinessPartnerImageURL"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.Identification">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CustomerName"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PostalCode"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CityName"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Country"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Customer"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="CustomerName"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>Customer</PropertyPath>
+                        <PropertyPath>CustomerName</PropertyPath>
+                        <PropertyPath>PostalCode</PropertyPath>
+                        <PropertyPath>CityName</PropertyPath>
+                        <PropertyPath>Country</PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="Communication.Contact">
+                    <Record>
+                        <PropertyValue Property="adr">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="type" EnumMember="Communication.ContactInformationType/preferred"/>
+                                    <PropertyValue Property="locality" Path="CityName"/>
+                                    <PropertyValue Property="country" Path="Country"/>
+                                    <PropertyValue Property="code" Path="PostalCode"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="tel">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="type" EnumMember="Communication.PhoneType/work Communication.PhoneType/preferred"/>
+                                    <PropertyValue Property="uri" Path="InternationalPhoneNumber"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="email">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="type" EnumMember="Communication.ContactInformationType/work"/>
+                                    <PropertyValue Property="address" Path="EmailAddress"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Communication.Address">
+                    <Record>
+                        <PropertyValue Property="type" EnumMember="Communication.ContactInformationType/preferred"/>
+                        <PropertyValue Property="locality" Path="CityName"/>
+                        <PropertyValue Property="country" Path="Country"/>
+                        <PropertyValue Property="code" Path="PostalCode"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.I_Customer_VHType/CustomerAccountGroup">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.I_Customer_VHType/AuthorizationGroup">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SD_F2200_OVP_ISR_SRV.I_Customer_VHType/IsBusinessPurposeCompleted">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

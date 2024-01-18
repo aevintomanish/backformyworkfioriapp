@@ -1,0 +1,264 @@
+{
+    "_version": "1.28.0",
+    "sap.app": {
+        "id": "com.casestudy.salesoverview11.zcsalesovp11",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "@sap/generator-fiori:ovp",
+            "version": "1.11.5",
+            "toolsId": "47a66830-df8b-4095-89e8-ffa97e66a580"
+        },
+        "dataSources": {
+            "mainService": {
+                "uri": "/sap/opu/odata/sap/SD_F2200_OVP_ISR_SRV/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [
+                        "SD_F2200_OVP_ISR_ANNO_MDL",
+                        "annotation"
+                    ],
+                    "localUri": "localService/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            },
+            "SD_F2200_OVP_ISR_ANNO_MDL": {
+                "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='SD_F2200_OVP_ISR_ANNO_MDL',Version='0001')/$value/",
+                "type": "ODataAnnotation",
+                "settings": {
+                    "localUri": "localService/SD_F2200_OVP_ISR_ANNO_MDL.xml"
+                }
+            },
+            "annotation": {
+                "type": "ODataAnnotation",
+                "uri": "annotations/annotation.xml",
+                "settings": {
+                    "localUri": "annotations/annotation.xml"
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.84.25",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.ushell": {},
+                "sap.f": {},
+                "sap.ui.comp": {},
+                "sap.ui.generic.app": {},
+                "sap.suite.ui.generic.template": {},
+                "sap.ovp": {},
+                "sap.ui.rta": {},
+                "sap.ui.layout": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "com.casestudy.salesoverview11.zcsalesovp11.i18n.i18n"
+                }
+            },
+            "mainModel": {
+                "dataSource": "mainService",
+                "preload": true,
+                "settings": {
+                    "defaultBindingMode": "TwoWay",
+                    "defaultCountMode": "Inline",
+                    "refreshAfterChange": false,
+                    "metadataUrlParams": {
+                        "sap-value-list": "none"
+                    }
+                }
+            },
+            "@i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "uri": "i18n/i18n.properties"
+            }
+        },
+        "resources": {
+            "css": []
+        },
+        "routing": {
+            "config": {},
+            "routes": [],
+            "targets": {}
+        }
+    },
+    "sap.ovp": {
+        "globalFilterModel": "mainModel",
+        "globalFilterEntityType": "C_GlobalFiltersOVP_F2200Type",
+        "containerLayout": "resizable",
+        "enableLiveFilter": true,
+        "considerAnalyticalParameters": false,
+        "cards": {
+            "creditCardMemo11": {
+                "model": "mainModel",
+                "template": "sap.ovp.cards.table",
+                "settings": {
+                    "title": "Blocked Credit Memo Requests",
+                    "entitySet": "C_Credit_Memo_F2200",
+                    "sortOrder": "ascending",
+                    "sortBy": "LastChangeDateTime",
+                    "annotationPath": "com.sap.vocabularies.UI.v1.LineItem"
+                }
+            },
+            "SalesOrderFullfillment": {
+                "model": "mainModel",
+                "template": "sap.ovp.cards.list",
+                "settings": {
+                    "title": "Sales Order Fullfillment",
+                    "entitySet": "C_Sofulfillmentmonitor_F2200",
+                    "listType": "condensed",
+                    "listFlavor": "bar",
+                    "sortOrder": "ascending",
+                    "sortBy": "IssueCategory",
+                    "annotationPath": "com.sap.vocabularies.UI.v1.LineItem"
+                }
+            },
+            "sqpipeline": {
+              "model": "mainModel",
+              "template": "sap.ovp.cards.list",
+              "settings": {
+                "title": "Sales Quotation Pipeline",
+                "entitySet": "C_SalesQuotationPipeline_F2200",
+                "listType": "condensed",
+                "listFlavor": "bar",
+                "sortOrder": "ascending",
+                "sortBy": "LastChangedByUser",
+                "annotationPath": "com.sap.vocabularies.UI.v1.LineItem"
+              }
+            },   
+            "OpenSalesOrders": {
+                "model": "mainModel",
+                "template": "sap.ovp.cards.list",
+                "settings": {
+                    "title": "Open Sales Orders",
+                    "entitySet": "C_OpenSalesOrders_F2200",
+                    "listType": "condensed",
+                    "listFlavor": "standard",
+                    "sortOrder": "ascending",
+                    "sortBy": "LastChangeDateTime",
+                    "annotationPath": "com.sap.vocabularies.UI.v1.LineItem",
+                    "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint",
+                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant",
+                    "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification"
+                }
+            },
+            "CustomerReturns": {
+                "model": "mainModel",
+                "template": "sap.ovp.cards.list",
+                "settings": {
+                    "title": "Customer Returns",
+                    "entitySet": "C_CustomerReturns_F2200",
+                    "listType": "condensed",
+                    "listFlavor": "standard",
+                    "sortOrder": "ascending",
+                    "sortBy": "LastChangeDateTime",
+                    "tabs": [
+                        {
+                            "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#allActiveReturnView",
+                            "value": "{{AllValues}}"
+                        },
+                        {
+                            "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#readyforRefundView",
+                            "value": "{{ReadyforRefund}}"
+                        },
+                        {
+                            "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#notReleasedView",
+                            "value": "{{NotReleased}}"
+                        },
+                        {
+                            "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#unDeliveredView",
+                            "value": "{{UnDelivered}}"
+                        },
+                        {
+                            "annotationPath": "com.sap.vocabularies.UI.v1.LineItem#CreatedwithLast7DaysView",
+                            "value": "{{CreatedwithLast7Days}}"
+                        }
+                    ]
+                }
+            },"IncomingSalesOrders": {
+              "model": "mainModel",
+              "template": "sap.ovp.cards.charts.analytical",
+              "settings": {
+                "title": "Incoming Sales Orders",
+                "subTitle": "sales order",
+                "entitySet": "C_MonthlySalesRevenue_F2200Results",
+                "tabs": [
+                  {
+                    "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#ISA",
+                    "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
+                    "selectionAnnotationPath":"com.sap.vocabularies.UI.v1.SelectionVariant#IS4",
+                    "value": "4 Months"
+                  },
+                  {
+                    "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#ISA",
+                    "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
+                    "selectionAnnotationPath":"com.sap.vocabularies.UI.v1.SelectionVariant#IS6",
+                    "value": "6 Months"
+                  },
+                  {
+                    "chartAnnotationPath": "com.sap.vocabularies.UI.v1.Chart#ISA",
+                    "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification",
+                    "selectionAnnotationPath":"com.sap.vocabularies.UI.v1.SelectionVariant#IS12",
+                    "value": "1 Year"
+                  }
+                ]}
+            },
+            "OpenSalesQuatations": {
+                "model": "mainModel",
+                "template": "sap.ovp.cards.table",
+                "settings": {
+                    "title": "Open Sales Quatations",
+                    "entitySet": "C_OpenQuotations_F2200",
+                    "sortOrder": "ascending",
+                    "sortBy": "TotalNetAmount",
+                    "annotationPath": "com.sap.vocabularies.UI.v1.LineItem",
+                    "dataPointAnnotationPath": "com.sap.vocabularies.UI.v1.DataPoint",
+                    "selectionAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant",
+                    "identificationAnnotationPath": "com.sap.vocabularies.UI.v1.Identification"
+                    }
+                }
+            
+            
+
+        }
+    },
+    "sap.fiori": {
+        "registrationIds": [],
+        "archeType": "analytical"
+    },
+    "sap.ui.generic.app": {
+        "settings": {}
+    }
+}

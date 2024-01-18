@@ -1,0 +1,379 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common" />
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI" />
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Communication.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication" />
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/sap/MM_PUR_POITEMS_MONI_SRV/$metadata">
+        <edmx:Include Namespace="MM_PUR_POITEMS_MONI_SRV" Alias="SAP" />
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
+            <Annotations Target="MM_PUR_POITEMS_MONI_SRV.C_PurchaseOrderItemMoniResult">
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>Supplier</PropertyPath>
+                        <PropertyPath>Material</PropertyPath>
+                        <PropertyPath>Plant</PropertyPath>
+                        <PropertyPath>ScheduleLineDeliveryDate</PropertyPath>
+                        <PropertyPath>DeliveryStatus</PropertyPath>
+                        <PropertyPath>PlannedDeliveryDuration</PropertyPath>
+                        <PropertyPath>PurchaseOrderOutputStatus</PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="UI.Chart">
+                    <Record Type="UI.ChartDefinitionType">
+                        <PropertyValue Property="Title" String="By Material Group" />
+                        <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Column" />
+                        <PropertyValue Property="Dimensions">
+                            <Collection>
+                                <PropertyPath>MaterialGroup</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="DimensionAttributes">
+                            <Collection>
+                                <Record Type="UI.ChartDimensionAttributeType">
+                                    <PropertyValue Property="Dimension" PropertyPath="MaterialGroup" />
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Measures">
+                            <Collection>
+                                <PropertyPath>NetAmount</PropertyPath>
+                                <PropertyPath>StillToBeDeliveredValue</PropertyPath>
+                                <PropertyPath>StillToInvoiceValue</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="MeasureAttributes">
+                            <Collection>
+                                <Record Type="UI.ChartMeasureAttributeType">
+                                    <PropertyValue Property="Measure" PropertyPath="StillToInvoiceValue" />
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1" />
+                                </Record>
+                                <Record Type="UI.ChartMeasureAttributeType">
+                                    <PropertyValue Property="Measure" PropertyPath="StillToBeDeliveredValue" />
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1" />
+                                </Record>
+                                <Record Type="UI.ChartMeasureAttributeType">
+                                    <PropertyValue Property="Measure" PropertyPath="NetAmount" />
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PurchaseOrder" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="PurchaseOrderItem" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Material" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="Supplier" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Criticality" Path="DeliveryDateCriticality" />
+                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon" />
+                            <PropertyValue Property="Value" Path="ScheduleLineDeliveryDate" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Criticality" Path="DeliveryDateCriticality" />
+                            <PropertyValue Property="CriticalityRepresentation" EnumMember="UI.CriticalityRepresentationType/WithoutIcon" />
+                            <PropertyValue Property="Value" Path="ScheduleLineOpenQty" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="OrderQuantity" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Medium" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="NetAmount" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Medium" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="StillToBeDeliveredQuantity" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Medium" />
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="StillToInvoiceValue" />
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Medium" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+
+            /visual filter
+            <!-- Item Count by Next Delivery Status -->
+            <Annotations Target="MM_PUR_POITEMS_MONI_SRV.C_PurchaseOrderItemMoniResult/DeliveryStatus" Qualifier="DeliveryStatusVisualFilter">
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="C_POItmNextDelivStsVislFltr" />
+                        <PropertyValue Property="SearchSupported" Bool="false" />
+                        <PropertyValue Property="PresentationVariantQualifier" String="DeliveryStatusVFPresentationVariant" />
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="PurchaseOrder" />
+                                    <PropertyValue Property="ValueListProperty" String="PurchaseOrder" />
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="PurchaseOrderItem" />
+                                    <PropertyValue Property="ValueListProperty" String="PurchaseOrderItem" />
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="DeliveryStatus" />
+                                    <PropertyValue Property="ValueListProperty" String="DeliveryStatus" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            //c
+            <Annotations Target="MM_PUR_POITEMS_MONI_SRV.C_POItmNextDelivStsVislFltrType">
+                <Annotation Term="UI.PresentationVariant" Qualifier="DeliveryStatusVFPresentationVariant">
+                    <Record Type="UI.PresentationVariantType">
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="DeliveryStatus" />
+                                    <PropertyValue Property="Descending" Bool="false" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="GroupBy" />
+                        <PropertyValue Property="TotalBy" />
+                        <PropertyValue Property="Total" />
+                        <PropertyValue Property="Visualizations">
+                            <Collection>
+                                <AnnotationPath>@UI.Chart#DeliveryStatusVFChart</AnnotationPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="RequestAtLeast" />
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.Chart" Qualifier="DeliveryStatusVFChart">
+                    <Record Type="UI.ChartDefinitionType">
+                        <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Donut" />
+                        <PropertyValue Property="Measures">
+                            <Collection>
+                                <PropertyPath>NumberOfPurchaseOrderItems</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="MeasureAttributes">
+                            <Collection>
+                                <Record Type="UI.ChartMeasureAttributeType">
+                                    <PropertyValue Property="Measure" PropertyPath="NumberOfPurchaseOrderItems" />
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1" />
+                                    <PropertyValue Property="DataPoint" AnnotationPath="@com.sap.vocabularies.UI.v1.DataPoint#DelvieryStatusCriticality" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Dimensions">
+                            <Collection>
+                                <PropertyPath>DeliveryStatus</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="DimensionAttributes">
+                            <Collection>
+                                <Record Type="UI.ChartDimensionAttributeType">
+                                    <PropertyValue Property="Dimension" PropertyPath="DeliveryStatus" />
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Actions" />
+                    </Record>
+                </Annotation>
+                //d
+                <Annotation Term="UI.DataPoint" Qualifier="DelvieryStatusCriticality">
+                    <Record Type="UI.DataPointType">
+                        <PropertyValue Property="Title" String="Criticality" />
+                        <PropertyValue Property="Value" Path="NumberOfPurchaseOrderItems" />
+                        <PropertyValue Property="Criticality" Path="DeliveryDateCriticality" />
+                    </Record>
+                </Annotation>
+            </Annotations>
+
+            <!-- Item Count by Upcoming Deliveries -->
+            <Annotations Target="MM_PUR_POITEMS_MONI_SRV.C_PurchaseOrderItemMoniResult/PlannedDeliveryDuration" Qualifier="DeliveryDurationVisualFilter">
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="C_POItemDelivDurnVislFltr" />
+                        <PropertyValue Property="SearchSupported" Bool="false" />
+                        <PropertyValue Property="PresentationVariantQualifier" String="DeliveryDurationVFPresentationVariant" />
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="PurchaseOrder" />
+                                    <PropertyValue Property="ValueListProperty" String="PurchaseOrder" />
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="PurchaseOrderItem" />
+                                    <PropertyValue Property="ValueListProperty" String="PurchaseOrderItem" />
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="PlannedDeliveryDuration" />
+                                    <PropertyValue Property="ValueListProperty" String="PlannedDeliveryDuration" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+
+            <Annotations Target="MM_PUR_POITEMS_MONI_SRV.C_POItemDelivDurnVislFltrType">
+                <Annotation Term="UI.PresentationVariant" Qualifier="DeliveryDurationVFPresentationVariant">
+                    <Record Type="UI.PresentationVariantType">
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="PlannedDeliveryDuration" />
+                                    <PropertyValue Property="Descending" Bool="false" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="GroupBy" />
+                        <PropertyValue Property="TotalBy" />
+                        <PropertyValue Property="Total" />
+                        <PropertyValue Property="Visualizations">
+                            <Collection>
+                                <AnnotationPath>@UI.Chart#DeliveryDurationVFChart</AnnotationPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="RequestAtLeast" />
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.Chart" Qualifier="DeliveryDurationVFChart">
+                    <Record Type="UI.ChartDefinitionType">
+                        <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Line" />
+                        <PropertyValue Property="Measures">
+                            <Collection>
+                                <PropertyPath>NumberOfPurchaseOrderItems</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="MeasureAttributes">
+                            <Collection>
+                                <Record Type="UI.ChartMeasureAttributeType">
+                                    <PropertyValue Property="Measure" PropertyPath="NumberOfPurchaseOrderItems" />
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Dimensions">
+                            <Collection>
+                                <PropertyPath>PlannedDeliveryDuration</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="DimensionAttributes">
+                            <Collection>
+                                <Record Type="UI.ChartDimensionAttributeType">
+                                    <PropertyValue Property="Dimension" PropertyPath="PlannedDeliveryDuration" />
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Actions" />
+                    </Record>
+                </Annotation>
+            </Annotations>
+
+            <Annotations Target="MM_PUR_POITEMS_MONI_SRV.C_PurchaseOrderItemMoniResult/PurchaseOrderOutputStatus" Qualifier="InternalOrderStatusVisualFilter">
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="C_POItemInternalOrdStsVislFltr" />
+                        <PropertyValue Property="SearchSupported" Bool="false" />
+                        <PropertyValue Property="PresentationVariantQualifier" String="InternalOrderStatusVFPresentationVariant" />
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="PurchaseOrder" />
+                                    <PropertyValue Property="ValueListProperty" String="PurchaseOrder" />
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="PurchaseOrderItem" />
+                                    <PropertyValue Property="ValueListProperty" String="PurchaseOrderItem" />
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="PurchaseOrderOutputStatus" />
+                                    <PropertyValue Property="ValueListProperty" String="PurchaseOrderOutputStatus" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+
+            <Annotations Target="MM_PUR_POITEMS_MONI_SRV.C_POItemInternalOrdStsVislFltrType">
+                <Annotation Term="UI.PresentationVariant" Qualifier="InternalOrderStatusVFPresentationVariant">
+                    <Record Type="UI.PresentationVariantType">
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="Common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="PurchaseOrderOutputStatus" />
+                                    <PropertyValue Property="Descending" Bool="false" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="GroupBy" />
+                        <PropertyValue Property="TotalBy" />
+                        <PropertyValue Property="Total" />
+                        <PropertyValue Property="Visualizations">
+                            <Collection>
+                                <AnnotationPath>@UI.Chart#InternalOrderStatusVFChart</AnnotationPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="RequestAtLeast" />
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.Chart" Qualifier="InternalOrderStatusVFChart">
+                    <Record Type="UI.ChartDefinitionType">
+                        <PropertyValue Property="ChartType" EnumMember="UI.ChartType/Column" />
+                        <PropertyValue Property="Measures">
+                            <Collection>
+                                <PropertyPath>NumberOfPurchaseOrderItems</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="MeasureAttributes">
+                            <Collection>
+                                <Record Type="UI.ChartMeasureAttributeType">
+                                    <PropertyValue Property="Measure" PropertyPath="NumberOfPurchaseOrderItems" />
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartMeasureRoleType/Axis1" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Dimensions">
+                            <Collection>
+                                <PropertyPath>PurchaseOrderOutputStatus</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="DimensionAttributes">
+                            <Collection>
+                                <Record Type="UI.ChartDimensionAttributeType">
+                                    <PropertyValue Property="Dimension" PropertyPath="PurchaseOrderOutputStatus" />
+                                    <PropertyValue Property="Role" EnumMember="UI.ChartDimensionRoleType/Category" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Actions" />
+                    </Record>
+                </Annotation>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

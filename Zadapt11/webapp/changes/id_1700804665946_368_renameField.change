@@ -1,0 +1,40 @@
+{
+	"fileName": "id_1700804665946_368_renameField",
+	"fileType": "change",
+	"changeType": "renameField",
+	"moduleName": "",
+	"reference": "customer.Zadapt11",
+	"packageName": "$TMP",
+	"content": {
+		"originalControlType": "sap.ui.comp.smartform.GroupElement"
+	},
+	"selector": {
+		"id": "ui.ssuite.s2p.mm.pur.po.manage.st.s1::sap.suite.ui.generic.template.ObjectPage.view.Details::C_PurchaseOrderTP--GeneralInformationFacet2::PurchasingGroup::GroupElement",
+		"idIsLocal": false
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {
+		"fieldLabel": {
+			"value": "Purc Group",
+			"type": "XFLD"
+		}
+	},
+	"namespace": "apps/ui.ssuite.s2p.mm.pur.po.manage.st.s1/changes/",
+	"projectId": "customer.Zadapt11",
+	"creation": "2023-11-24T05:44:26.216Z",
+	"originalLanguage": "EN",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.84.40",
+		"sourceChangeFileName": "",
+		"compositeCommand": "",
+		"command": "rename"
+	},
+	"oDataInformation": {},
+	"dependentSelector": {},
+	"jsOnly": false,
+	"variantReference": "ui.ssuite.s2p.mm.pur.po.manage.st.s1::sap.suite.ui.generic.template.ObjectPage.view.Details::C_PurchaseOrderTP--template::ObjectPage::ObjectPageVariant",
+	"appDescriptorChange": false
+}

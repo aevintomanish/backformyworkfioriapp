@@ -1,0 +1,59 @@
+<mvc:View
+    controllerName="com.ibm.zcaseprdfs11.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content />
+        <Table id="productTable"
+            items="{products>/}"
+            selectionChange="onRowPress"
+            mode="SingleSelectMaster"
+        >
+            <columns>
+                <Column id="_IDGenColumn1">
+                    <Label id="_IDGenLabel1" text="Product ID" />
+                </Column>
+                <Column id="_IDGenColumn2">
+                    <Label id="_IDGenLabel2" text="Product Name" />
+                </Column>
+                <Column id="_IDGenColumn3">
+                    <Label id="_IDGenLabel3" text="Supplier" />
+                </Column>
+                <Column id="_IDGenColumn4">
+                    <Label id="_IDGenLabel4" text="Dimensions" />
+                </Column>
+                <Column id="_IDGenColumn5">
+                    <Label id="_IDGenLabel5" text="Weight" />
+                </Column>
+                <Column id="_IDGenColumn6">
+                    <Label id="_IDGenLabel6" text="Price" />
+                </Column>
+            </columns>
+            <ColumnListItem id="_IDGenColumnListItem1">
+                <cells>
+                    <Text id="_IDGenText1" text="{products>ProductID}" />
+                </cells>
+                <cells>
+                    <Text id="_IDGenText2" text="{products>ProductName}" />
+                </cells>
+                <cells>
+                    <Text id="_IDGenText3" text="{products>Supplier}" />
+                </cells>
+                <cells>
+                    <Text id="_IDGenText4" text="{products>Dimensions}" />
+                </cells>
+                <cells>
+                    <Text id="_IDGenText5" text="{products>Weight}" />
+                </cells>
+                <cells>
+                    <Text id="_IDGenText6" text="{products>Price}" />
+                </cells>
+            </ColumnListItem>
+        </Table>
+    </Page>
+</mvc:View>

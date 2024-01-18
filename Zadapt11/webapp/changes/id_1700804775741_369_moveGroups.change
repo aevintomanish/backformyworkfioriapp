@@ -1,0 +1,47 @@
+{
+	"fileName": "id_1700804775741_369_moveGroups",
+	"fileType": "change",
+	"changeType": "moveGroups",
+	"moduleName": "",
+	"reference": "customer.Zadapt11",
+	"packageName": "$TMP",
+	"content": {
+		"moveGroups": [{
+			"selector": {
+				"id": "ui.ssuite.s2p.mm.pur.po.manage.st.s1::sap.suite.ui.generic.template.ObjectPage.view.Details::C_PurchaseOrderTP--GeneralInformationFacet2::FormGroup",
+				"idIsLocal": false
+			},
+			"sourceIndex": 1,
+			"index": 0
+		}]
+	},
+	"selector": {
+		"id": "ui.ssuite.s2p.mm.pur.po.manage.st.s1::sap.suite.ui.generic.template.ObjectPage.view.Details::C_PurchaseOrderTP--GeneralInformationCollectionFacet::Form",
+		"idIsLocal": false
+	},
+	"layer": "CUSTOMER_BASE",
+	"texts": {},
+	"namespace": "apps/ui.ssuite.s2p.mm.pur.po.manage.st.s1/changes/",
+	"projectId": "customer.Zadapt11",
+	"creation": "2023-11-24T05:46:15.951Z",
+	"originalLanguage": "EN",
+	"support": {
+		"generator": "Change.createInitialFileContent",
+		"service": "",
+		"user": "",
+		"sapui5Version": "1.84.40",
+		"sourceChangeFileName": "",
+		"compositeCommand": "",
+		"command": "move"
+	},
+	"oDataInformation": {},
+	"dependentSelector": {
+		"movedGroups": [{
+			"id": "ui.ssuite.s2p.mm.pur.po.manage.st.s1::sap.suite.ui.generic.template.ObjectPage.view.Details::C_PurchaseOrderTP--GeneralInformationFacet2::FormGroup",
+			"idIsLocal": false
+		}]
+	},
+	"jsOnly": false,
+	"variantReference": "ui.ssuite.s2p.mm.pur.po.manage.st.s1::sap.suite.ui.generic.template.ObjectPage.view.Details::C_PurchaseOrderTP--template::ObjectPage::ObjectPageVariant",
+	"appDescriptorChange": false
+}

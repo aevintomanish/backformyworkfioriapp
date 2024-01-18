@@ -1,0 +1,83 @@
+[
+    {
+      "ProductID": 1,
+      "ProductName": "Smartphone",
+      "Supplier": "TechCo",
+      "Dimensions": "5.8 x 2.8 x 0.3 inches",
+      "Weight": "5.6 ounces",
+      "Price": 599.99
+    },
+    {
+      "ProductID": 2,
+      "ProductName": "Laptop",
+      "Supplier": "Electronics Ltd.",
+      "Dimensions": "13.3 x 9.5 x 0.7 inches",
+      "Weight": "3.1 pounds",
+      "Price": 999.99
+    },
+    {
+      "ProductID": 3,
+      "ProductName": "Headphones",
+      "Supplier": "Audio Emporium",
+      "Dimensions": "7.2 x 6.9 x 3.2 inches",
+      "Weight": "12.8 ounces",
+      "Price": 149.99
+    },
+    {
+      "ProductID": 4,
+      "ProductName": "Smartwatch",
+      "Supplier": "Wearable Tech Co.",
+      "Dimensions": "1.5 x 1.5 x 0.4 inches",
+      "Weight": "1.2 ounces",
+      "Price": 249.99
+    },
+    {
+      "ProductID": 5,
+      "ProductName": "Desk Chair",
+      "Supplier": "Furniture World",
+      "Dimensions": "24 x 25.6 x 39.8 inches",
+      "Weight": "28.6 pounds",
+      "Price": 199.99
+    },
+    {
+      "ProductID": 6,
+      "ProductName": "Backpack",
+      "Supplier": "Outdoor Gear Inc.",
+      "Dimensions": "18 x 12 x 7 inches",
+      "Weight": "1.9 pounds",
+      "Price": 79.99
+    },
+    {
+      "ProductID": 7,
+      "ProductName": "TV",
+      "Supplier": "Electronics Ltd.",
+      "Dimensions": "42.5 x 25.5 x 3.8 inches",
+      "Weight": "29.8 pounds",
+      "Price": 799.99
+    },
+    {
+      "ProductID": 8,
+      "ProductName": "External Hard Drive",
+      "Supplier": "Storage Solutions Co.",
+      "Dimensions": "4.7 x 3.2 x 0.5 inches",
+      "Weight": "6.4 ounces",
+      "Price": 129.99
+    },
+    {
+      "ProductID": 9,
+      "ProductName": "Wireless Mouse",
+      "Supplier": "TechCo",
+      "Dimensions": "4.0 x 2.3 x 1.5 inches",
+      "Weight": "2.1 ounces",
+      "Price": 29.99
+    },
+    {
+      "ProductID": 10,
+      "ProductName": "Gaming Console",
+      "Supplier": "Gaming Tech Inc.",
+      "Dimensions": "11.6 x 9.0 x 2.5 inches",
+      "Weight": "4.6 pounds",
+      "Price": 399.99
+    }
+  ]
+  

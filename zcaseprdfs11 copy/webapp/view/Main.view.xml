@@ -1,0 +1,49 @@
+<mvc:View controllerName="com.ibm.zcaseprdfs11.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+     <Page id="page" title="{i18n>title}">
+       <Table items="{productsModel>/}"
+            mode="SingleSelectMaster"  selectionChange=".onRowSelection" >
+            <columns>
+                <Column>
+                    <Label text="Product ID" />
+                </Column>
+                <Column>
+                    <Label text="Product Name" />
+                </Column>
+                <Column>
+                    <Label text="Supplier" />
+                </Column>
+                <Column>
+                    <Label text="Dimensions" />
+                </Column>
+                <Column>
+                    <Label text="Weight" />
+                </Column>
+                 <Column>
+                    <Label text="Price" />
+                </Column>
+            </columns>
+            <ColumnListItem  press='onRowSelection' >
+          <cells>
+            <Text text="{productsModel>ProductID}" />
+          </cells>
+          <cells>
+            <Text text="{productsModel>ProductName}" />
+          </cells>
+          <cells>
+            <Text text="{productsModel>Supplier}" />
+          </cells>
+          <cells>
+            <Text text="{productsModel>Dimensions}" />
+          </cells>
+          <cells>
+            <Text text="{productsModel>Weight}" />
+          </cells>
+          <cells>
+            <Text text="{productsModel>Price}" />
+          </cells>
+        </ColumnListItem>
+                </Table>
+    </Page>
+</mvc:View>
